@@ -1,0 +1,20 @@
+{
+  "name": "bbwdadfg/m3u8-player-site-kit",
+  "description": "Small URL helpers for M3U8 Player, the free M3U8 downloader, converter, and HLS player at https://m3u8-player.net.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://m3u8-player.net",
+  "keywords": ["m3u8player", "m3u8", "hls", "video", "streaming"],
+  "support": {
+    "source": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+    "issues": "https://github.com/bbwdadfg/m3u8-player-site-kit/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "M3u8Player\\SiteKit\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  }
+}

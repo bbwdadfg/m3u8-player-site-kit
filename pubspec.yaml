@@ -1,0 +1,18 @@
+name: m3u8_player_site_kit
+description: Small URL helpers for M3U8 Player, the free M3U8 downloader, converter, and HLS player.
+version: 0.1.0
+homepage: https://m3u8-player.net
+repository: https://github.com/bbwdadfg/m3u8-player-site-kit
+issue_tracker: https://github.com/bbwdadfg/m3u8-player-site-kit/issues
+
+environment:
+  sdk: ^3.8.0
+
+topics:
+  - m3u8player
+  - m3u8
+  - hls
+  - streams
+
+dev_dependencies:
+  test: ^1.25.0
