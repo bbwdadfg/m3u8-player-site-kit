@@ -1,0 +1,75 @@
+{
+  "name": "m3u8-player-site-kit",
+  "displayName": "M3U8 Player Site Kit",
+  "description": "Open M3U8 Player, HLS player, IPTV player, downloader, and converter tools from VS Code.",
+  "version": "0.1.0",
+  "publisher": "bbwdadfg",
+  "license": "MIT",
+  "homepage": "https://m3u8-player.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbwdadfg/m3u8-player-site-kit.git",
+    "directory": "open-vsx"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/m3u8-player-site-kit/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "m3u8player",
+    "m3u8",
+    "hls",
+    "iptv",
+    "streaming"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onCommand:m3u8PlayerSiteKit.openHome",
+    "onCommand:m3u8PlayerSiteKit.openHlsPlayer",
+    "onCommand:m3u8PlayerSiteKit.openIptvPlayer",
+    "onCommand:m3u8PlayerSiteKit.openDownloader",
+    "onCommand:m3u8PlayerSiteKit.openConverter"
+  ],
+  "main": "./extension.js",
+  "files": [
+    "extension.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "m3u8PlayerSiteKit.openHome",
+        "title": "M3U8 Player: Open Online M3U8 Player"
+      },
+      {
+        "command": "m3u8PlayerSiteKit.openHlsPlayer",
+        "title": "M3U8 Player: Open HLS Player"
+      },
+      {
+        "command": "m3u8PlayerSiteKit.openIptvPlayer",
+        "title": "M3U8 Player: Open IPTV Player"
+      },
+      {
+        "command": "m3u8PlayerSiteKit.openDownloader",
+        "title": "M3U8 Player: Open M3U8 Downloader"
+      },
+      {
+        "command": "m3u8PlayerSiteKit.openConverter",
+        "title": "M3U8 Player: Open M3U8 to MP4 Converter"
+      }
+    ]
+  },
+  "scripts": {
+    "check": "node --check extension.js",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.7.0",
+    "ovsx": "^0.10.4"
+  }
+}

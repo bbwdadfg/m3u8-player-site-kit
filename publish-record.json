@@ -16,7 +16,7 @@
       "https://m3u8-player.net/iptv-player/"
     ],
     "run_started_at": "2026-06-29T08:20:00Z",
-    "run_finished_at": "2026-06-29T09:10:00Z"
+    "run_finished_at": "2026-06-29T13:00:10Z"
   },
   "platforms": [
     {
@@ -297,7 +297,7 @@
     },
     {
       "platform": "jsr",
-      "status": "blocked_namespace",
+      "status": "verified",
       "artifact_type": "typescript_package",
       "automation_level": "semi_auto",
       "package": "@bbwdadfg/m3u8-player-site-kit",
@@ -305,21 +305,24 @@
       "public_url": "https://jsr.io/@bbwdadfg/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [
+        "package_page",
+        "version_page",
         "README.md",
-        "package_docs"
+        "package_metadata"
       ],
-      "credential_status": "keychain_token_present_but_should_rotate",
-      "blocked_reason": "JSR requires package creation/approval at https://jsr.io/new?scope=bbwdadfg&package=m3u8-player-site-kit&from=cli before CLI publish.",
+      "credential_status": "interactive_browser_auth_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "dry_run_and_live_publish_attempt",
-        "result": "Dry-run passed; live publish blocked because the scoped package does not exist yet.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "jsr_cli_info_and_public_page",
+        "result": "JSR CLI published @bbwdadfg/m3u8-player-site-kit@0.1.0; public page returned 200 and jsr info reports latest 0.1.0 with one version.",
+        "checked_at": "2026-06-29T12:48:10Z"
       },
       "cleanup": [
-        "temporary token shell variable unset"
+        "no reusable JSR token stored or reused"
       ],
       "notes": [
-        "JSR CLI echoed the token in failed command output; rotate the JSR token before rerunning."
+        "Package was created in JSR UI, then published through interactive browser authorization.",
+        "Old exposed JSR token was not reused."
       ]
     },
     {
@@ -552,7 +555,7 @@
     },
     {
       "platform": "terraform_registry",
-      "status": "blocked_oauth",
+      "status": "verified",
       "artifact_type": "terraform_module",
       "automation_level": "semi_auto",
       "package": "bbwdadfg/m3u8-player-site-kit/null",
@@ -560,20 +563,22 @@
       "public_url": "https://registry.terraform.io/modules/bbwdadfg/m3u8-player-site-kit/null/latest",
       "repository_url": "https://github.com/bbwdadfg/terraform-null-m3u8-player-site-kit",
       "link_surfaces_verified": [
+        "registry_module_page",
+        "registry_api",
         "README.md",
-        "repository_homepage",
-        "terraform_validate"
+        "source_repo"
       ],
-      "credential_status": "hashicorp_token_present_but_registry_import_requires_ui",
-      "blocked_reason": "Terraform Registry public module publication requires web login, GitHub connection, and importing the public repository.",
+      "credential_status": "terraform_registry_ui_oauth_completed",
+      "blocked_reason": "",
       "verification": {
-        "method": "terraform_validate_and_github_repo",
-        "result": "Terraform fmt/init/validate passed; public GitHub repo and v0.1.0 tag exist.",
-        "checked_at": "2026-06-29T09:10:00Z"
+        "method": "terraform_registry_public_page_and_api",
+        "result": "Registry public page returned 200; API returned version 0.1.0, source repo, README links to M3U8 Player, HLS player, downloader, converter, and IPTV player.",
+        "checked_at": "2026-06-29T12:36:30Z"
       },
       "cleanup": [],
       "notes": [
-        "User must import repository bbwdadfg/terraform-null-m3u8-player-site-kit in Terraform Registry UI."
+        "Published through HCP Terraform Public Registry UI after GitHub OAuth connection.",
+        "Registry import reported: All versions have been successfully published; created v0.1.0."
       ]
     },
     {
@@ -583,24 +588,26 @@
       "automation_level": "semi_auto",
       "package": "m3u8-player-site-kit",
       "version": "0.1.0",
-      "public_url": "https://bbwdadfg.github.io/m3u8-player-helm-charts/index.yaml",
+      "public_url": "https://artifacthub.io/packages/helm/m3u8-player-helm-charts/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-helm-charts",
       "link_surfaces_verified": [
-        "Chart.yaml_home",
-        "sources",
-        "README.md",
-        "helm_index"
+        "helm_index_yaml",
+        "artifacthub_repository_control_panel",
+        "artifacthub_repo_metadata",
+        "github_pages_metadata"
       ],
       "credential_status": "gh_auth_used",
-      "blocked_reason": "Artifact Hub listing requires user login to add/claim the Helm repository and provide repository ID for ownership metadata.",
+      "blocked_reason": "",
       "verification": {
-        "method": "helm_lint_template_and_public_index",
-        "result": "Helm lint/template passed; GitHub Pages index.yaml is public and includes homepage, sources, and long-tail M3U8 links.",
-        "checked_at": "2026-06-29T09:10:00Z"
+        "method": "artifact_hub_control_panel_and_github_pages_metadata",
+        "result": "Artifact Hub repository was added under bbwdadfg with ID 5edaa3c0-5a5a-41d2-baca-f28413f65220; GitHub Pages serves artifacthub-repo.yml and index.yaml. Artifact Hub package API is still indexing.",
+        "checked_at": "2026-06-29T12:42:30Z"
       },
       "cleanup": [],
       "notes": [
-        "Helm repo URL is ready for Artifact Hub: https://bbwdadfg.github.io/m3u8-player-helm-charts"
+        "Repository ID: 5edaa3c0-5a5a-41d2-baca-f28413f65220",
+        "Artifact Hub UI reported: Not processed yet, it will be processed automatically in about 22 minutes.",
+        "artifacthub-repo.yml pushed to master and gh-pages."
       ]
     },
     {
@@ -634,23 +641,33 @@
     },
     {
       "platform": "open_vsx",
-      "status": "blocked_credentials",
+      "status": "verified",
       "artifact_type": "vscode_compatible_extension",
       "automation_level": "semi_auto_review",
-      "package": "m3u8-player-site-kit",
+      "package": "bbwdadfg.m3u8-player-site-kit",
       "version": "0.1.0",
       "public_url": "https://open-vsx.org/extension/bbwdadfg/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "openvsx_token_missing",
-      "blocked_reason": "Open VSX token is missing and publishing requires Eclipse/Open VSX publisher agreement and namespace setup.",
+      "link_surfaces_verified": [
+        "open_vsx_api",
+        "extension_page",
+        "package_metadata",
+        "README.md"
+      ],
+      "credential_status": "temporary_open_vsx_pat_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "credential_check",
-        "result": "Keychain service publish-package-backlinks/openvsx-token is missing.",
-        "checked_at": "2026-06-29T09:10:00Z"
+        "method": "open_vsx_api_and_cli_metadata",
+        "result": "Open VSX API returned version 0.1.0 with homepage https://m3u8-player.net, repository, description, tags, and downloadable VSIX.",
+        "checked_at": "2026-06-29T13:00:10Z"
       },
-      "cleanup": [],
-      "notes": []
+      "cleanup": [
+        "temporary PAT used for publish; deletion pending because Chrome extension backend disconnected after publish"
+      ],
+      "notes": [
+        "Created a minimal VS Code compatible command extension under open-vsx/.",
+        "Generated PAT was not stored in files or records; it should be deleted from Open VSX Access Tokens page."
+      ]
     },
     {
       "platform": "wordpress_plugin_directory",
@@ -786,11 +803,6 @@
   ],
   "follow_up": [
     {
-      "platform": "jsr",
-      "reason": "Create/approve @bbwdadfg/m3u8-player-site-kit on JSR and rotate the exposed JSR token before rerun.",
-      "owner": "user"
-    },
-    {
       "platform": "github_packages",
       "reason": "Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission.",
       "owner": "user"
@@ -821,18 +833,13 @@
       "owner": "agent"
     },
     {
-      "platform": "terraform_registry",
-      "reason": "Sign in to Terraform Registry, connect GitHub, and import bbwdadfg/terraform-null-m3u8-player-site-kit using tag v0.1.0.",
-      "owner": "user"
-    },
-    {
       "platform": "helm_artifact_hub",
-      "reason": "Add Helm repo https://bbwdadfg.github.io/m3u8-player-helm-charts in Artifact Hub and provide the repository ID for artifacthub-repo.yml ownership metadata.",
-      "owner": "user"
+      "reason": "Recheck Artifact Hub package API/page after repository indexing completes.",
+      "owner": "agent"
     },
     {
       "platform": "open_vsx",
-      "reason": "Create/confirm Open VSX publisher namespace and store openvsx-token in Keychain.",
+      "reason": "Delete the temporary Open VSX token named \"m3u8-player-site-kit publish\" from Access Tokens; publish itself is verified.",
       "owner": "user"
     },
     {

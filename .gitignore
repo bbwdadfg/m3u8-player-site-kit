@@ -19,6 +19,7 @@
 *.war
 *.nupkg
 *.rock
+*.vsix
 __pycache__/
 *.egg-info/
 nuget/**/bin/
