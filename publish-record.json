@@ -327,24 +327,32 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "planned",
+      "status": "published",
       "artifact_type": "java_library",
       "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:m3u8-player-site-kit",
       "version": "0.1.0",
       "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_token_present_gpg_passphrase_present",
+      "link_surfaces_verified": [
+        "central_portal_artifact_page",
+        "javadoc_io_page",
+        "github_maven_tag"
+      ],
+      "credential_status": "keychain_token_used_gpg_passphrase_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_attempted_this_pass",
-        "result": "Maven Central credentials exist, but this pass prioritized already prepared lower-risk packages. Needs Central-ready pom and signed deployment.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "central_publisher_api_and_public_pages",
+        "result": "Central deployment 8506ed3e-5ce8-48aa-a0c7-60397e2b7d99 validated, publish API returned HTTP 204, Central Portal artifact page and javadoc.io returned 200; repo1.maven.org POM/JAR are still indexing with 404, so verification is pending.",
+        "checked_at": "2026-06-29T13:31:47Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary Maven settings.xml deleted",
+        "temporary Maven/GPG shell variables cleared"
+      ],
       "notes": [
-        "Use groupId io.github.bbwdadfg and primary GPG key AF10698CAC475560 in a follow-up."
+        "Coordinates: io.github.bbwdadfg:m3u8-player-site-kit:0.1.0",
+        "Maven SCM tag maven-v0.1.0 pushed to GitHub."
       ]
     },
     {
@@ -379,24 +387,32 @@
     },
     {
       "platform": "cocoapods",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "ios_macos_pod",
       "automation_level": "semi_auto_with_trunk_auth",
       "package": "M3u8PlayerSiteKit",
       "version": "0.1.0",
       "public_url": "https://cocoapods.org/pods/M3u8PlayerSiteKit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_token_present",
+      "link_surfaces_verified": [
+        "podspec_homepage",
+        "podspec_social_media_url",
+        "cocoapods_public_page",
+        "cocoapods_metrics_api"
+      ],
+      "credential_status": "github_actions_secret_from_keychain",
       "blocked_reason": "",
       "verification": {
-        "method": "not_attempted_this_pass",
-        "result": "No podspec was prepared in this pass.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "github_actions_pod_trunk_push_and_public_page",
+        "result": "GitHub Actions run 28375419607 completed pod spec lint and pod trunk push; CocoaPods public page and metrics API returned 200 for M3u8PlayerSiteKit 0.1.0.",
+        "checked_at": "2026-06-29T13:31:47Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "COCOAPODS_TRUNK_TOKEN stored as GitHub Actions secret, not committed",
+        "local shell token variable cleared"
+      ],
       "notes": [
-        "Can be done with a small Swift typed metadata helper and CocoaPods source tag."
+        "Local pod lib lint --quick passed; local swift build passed; swift test needs full Xcode/XCTest on this Mac."
       ]
     },
     {
@@ -757,23 +773,26 @@
     },
     {
       "platform": "flathub",
-      "status": "skipped_policy",
-      "artifact_type": "desktop_app",
-      "automation_level": "pr_review",
+      "status": "blocked_review",
+      "artifact_type": "desktop_app_flatpak",
+      "automation_level": "manual_review_pr_required",
       "package": "net.m3u8_player.SiteKit",
       "version": "0.1.0",
       "public_url": "https://flathub.org/apps/net.m3u8_player.SiteKit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
       "credential_status": "not_applicable",
-      "blocked_reason": "Flathub requires a real desktop app with AppStream metadata; backlink-only wrapper would be misleading and likely rejected.",
+      "blocked_reason": "Flathub requires a real buildable desktop app, AppStream metadata, desktop file, exportable icon, screenshots, linter checks, and GitHub PR review; a bare PWA/backlink wrapper should not be submitted.",
       "verification": {
-        "method": "policy_fit_check",
-        "result": "No real desktop app exists for this site-kit helper.",
-        "checked_at": "2026-06-29T09:10:00Z"
+        "method": "official_flathub_requirements_review",
+        "result": "The main site PWA was implemented and pushed, but no Flatpak PR was opened because the current Mac lacks flatpak-builder and the available artifact is not yet a review-ready desktop application.",
+        "checked_at": "2026-06-29T13:31:47Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Main site PWA commit pushed: bbwdadfg/m3u8player@3b99014 on seo-growth-clusters-20260612.",
+        "Proceed only after creating a real desktop wrapper with AppStream metadata and screenshots."
+      ]
     },
     {
       "platform": "homebrew",
@@ -821,12 +840,7 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "reason": "Prepare Central-ready signed Maven artifact under io.github.bbwdadfg.",
-      "owner": "agent"
-    },
-    {
-      "platform": "cocoapods",
-      "reason": "Prepare Swift podspec and publish with existing CocoaPods token.",
+      "reason": "Recheck repo1.maven.org POM/JAR and javadoc.io after Central indexing; mark verified when artifacts return 200.",
       "owner": "agent"
     },
     {
@@ -851,7 +865,7 @@
     },
     {
       "platform": "flathub",
-      "reason": "Only proceed if you want a real desktop app, not a backlink-only wrapper.",
+      "reason": "Create a real Flatpak desktop app wrapper with AppStream metadata, screenshots, and linter validation before opening a Flathub PR.",
       "owner": "user"
     }
   ]

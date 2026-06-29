@@ -11,11 +11,9 @@
 | --- | ---: |
 | blocked_credentials | 3 |
 | blocked_oauth | 1 |
-| blocked_review | 2 |
-| planned | 2 |
-| published | 1 |
-| skipped_policy | 1 |
-| verified | 21 |
+| blocked_review | 3 |
+| published | 2 |
+| verified | 22 |
 
 ## Published Links
 
@@ -33,7 +31,9 @@
 | clojars | `net.clojars.tianwei/m3u8-player-site-kit` | `0.1.0` | <https://clojars.org/net.clojars.tianwei/m3u8-player-site-kit> | Clojars Maven metadata returned release 0.1.0. |
 | docker_hub | `baiwei111/m3u8-player-site-kit` | `0.1.0/latest` | <https://hub.docker.com/r/baiwei111/m3u8-player-site-kit> | Previous run verified Docker manifest digest and Docker Hub overview. |
 | jsr | `@bbwdadfg/m3u8-player-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/m3u8-player-site-kit> | JSR CLI published @bbwdadfg/m3u8-player-site-kit@0.1.0; public page returned 200 and jsr info reports latest 0.1.0 with one version. |
+| maven_central_javadoc | `io.github.bbwdadfg:m3u8-player-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/m3u8-player-site-kit> | Central deployment 8506ed3e-5ce8-48aa-a0c7-60397e2b7d99 validated, publish API returned HTTP 204, Central Portal artifact page and javadoc.io returned 200; repo1.maven.org POM/JAR are still indexing with 404, so verification is pending. |
 | nuget | `M3u8PlayerSiteKit` | `0.1.0` | <https://www.nuget.org/packages/M3u8PlayerSiteKit/0.1.0> | NuGet package page returned 200 and README links include M3U8 Player, online M3U8 player, M3U8 downloader, M3U8 to MP4 converter, M3U8 HLS player, and IPTV M3U8 player. |
+| cocoapods | `M3u8PlayerSiteKit` | `0.1.0` | <https://cocoapods.org/pods/M3u8PlayerSiteKit> | GitHub Actions run 28375419607 completed pod spec lint and pod trunk push; CocoaPods public page and metrics API returned 200 for M3u8PlayerSiteKit 0.1.0. |
 | luarocks | `m3u8-player-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/m3u8-player-site-kit> | LuaRocks page returned 200 and shows homepage https://m3u8-player.net plus version 0.1.0-1. |
 | chocolatey | `m3u8-player-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/m3u8-player-site-kit> | Chocolatey package page returned 200, shows public download counts, and exposes the 0.1.0 nupkg download URL. |
 | github_packages | `@bbwdadfg/m3u8-player-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit> | Package published to npm.pkg.github.com and authenticated metadata shows version 0.1.0 plus homepage/repository. |
@@ -51,13 +51,12 @@
 | github_packages | `published` | Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission. | user |
 | cpan_metacpan | `blocked_credentials` | Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload. | user |
 | hackage | `blocked_credentials` | Add a Hackage token to Keychain if Hackage is still desired. | user |
-| maven_central_javadoc | `planned` | Prepare Central-ready signed Maven artifact under io.github.bbwdadfg. | agent |
-| cocoapods | `planned` | Prepare Swift podspec and publish with existing CocoaPods token. | agent |
+| maven_central_javadoc | `published` | Recheck repo1.maven.org POM/JAR and javadoc.io after Central indexing; mark verified when artifacts return 200. | agent |
 | open_vsx | `verified` | Delete the temporary Open VSX token named "m3u8-player-site-kit publish" from Access Tokens; publish itself is verified. | user |
 | wordpress_plugin_directory | `blocked_oauth` | Sign in to WordPress.org and complete plugin submission/review flow after a real plugin zip is prepared. | user |
 | aur | `blocked_credentials` | Add local SSH public key to an AUR account and provide/confirm package ownership. | user |
 | cran | `blocked_review` | Confirm maintainer email if a CRAN submission is made. | user |
-| flathub | `skipped_policy` | Only proceed if you want a real desktop app, not a backlink-only wrapper. | user |
+| flathub | `blocked_review` | Create a real Flatpak desktop app wrapper with AppStream metadata, screenshots, and linter validation before opening a Flathub PR. | user |
 
 ## Failed Platforms
 
@@ -78,9 +77,9 @@
 - clojars: published_previous_run; no temporary local credential files recorded.
 - docker_hub: published_previous_run; no temporary local credential files recorded.
 - jsr: interactive_browser_auth_used; no reusable JSR token stored or reused.
-- maven_central_javadoc: keychain_token_present_gpg_passphrase_present; no temporary local credential files recorded.
+- maven_central_javadoc: keychain_token_used_gpg_passphrase_used; temporary Maven settings.xml deleted; temporary Maven/GPG shell variables cleared.
 - nuget: keychain_token_used; NUGET_API_KEY environment cleared after command.
-- cocoapods: keychain_token_present; no temporary local credential files recorded.
+- cocoapods: github_actions_secret_from_keychain; COCOAPODS_TRUNK_TOKEN stored as GitHub Actions secret, not committed; local shell token variable cleared.
 - luarocks: keychain_token_used; temporary API key shell variable unset.
 - cpan_metacpan: keychain_credentials_rejected; temporary PAUSE config removed.
 - hackage: keychain_token_missing; no temporary local credential files recorded.
@@ -103,10 +102,9 @@
 - github_packages: Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission. (user)
 - cpan_metacpan: Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload. (user)
 - hackage: Add a Hackage token to Keychain if Hackage is still desired. (user)
-- maven_central_javadoc: Prepare Central-ready signed Maven artifact under io.github.bbwdadfg. (agent)
-- cocoapods: Prepare Swift podspec and publish with existing CocoaPods token. (agent)
+- maven_central_javadoc: Recheck repo1.maven.org POM/JAR and javadoc.io after Central indexing; mark verified when artifacts return 200. (agent)
 - open_vsx: Delete the temporary Open VSX token named "m3u8-player-site-kit publish" from Access Tokens; publish itself is verified. (user)
 - wordpress_plugin_directory: Sign in to WordPress.org and complete plugin submission/review flow after a real plugin zip is prepared. (user)
 - aur: Add local SSH public key to an AUR account and provide/confirm package ownership. (user)
 - cran: Confirm maintainer email if a CRAN submission is made. (user)
-- flathub: Only proceed if you want a real desktop app, not a backlink-only wrapper. (user)
+- flathub: Create a real Flatpak desktop app wrapper with AppStream metadata, screenshots, and linter validation before opening a Flathub PR. (user)
