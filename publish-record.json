@@ -472,7 +472,7 @@
     },
     {
       "platform": "chocolatey",
-      "status": "submitted",
+      "status": "verified",
       "artifact_type": "windows_package",
       "automation_level": "semi_auto_review",
       "package": "m3u8-player-site-kit",
@@ -481,20 +481,22 @@
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [
         "projectUrl",
-        "package_page"
+        "repository",
+        "package_page",
+        "download_link"
       ],
       "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "chocolatey_public_page",
-        "result": "Chocolatey page returned 200 with project URL https://m3u8-player.net and status Pending automated review.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "chocolatey_public_page_and_download_link",
+        "result": "Chocolatey package page returned 200, shows public download counts, and exposes the 0.1.0 nupkg download URL.",
+        "checked_at": "2026-06-29T13:18:39Z"
       },
       "cleanup": [
         "NUGET_API_KEY environment cleared after command"
       ],
       "notes": [
-        "Submitted to Chocolatey moderation/review queue."
+        "Package is publicly downloadable from community.chocolatey.org."
       ]
     },
     {
@@ -583,7 +585,7 @@
     },
     {
       "platform": "helm_artifact_hub",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "helm_chart",
       "automation_level": "semi_auto",
       "package": "m3u8-player-site-kit",
@@ -592,22 +594,22 @@
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-helm-charts",
       "link_surfaces_verified": [
         "helm_index_yaml",
-        "artifacthub_repository_control_panel",
-        "artifacthub_repo_metadata",
+        "artifacthub_public_page",
+        "artifacthub_package_api",
+        "artifacthub_verified_publisher",
         "github_pages_metadata"
       ],
       "credential_status": "gh_auth_used",
       "blocked_reason": "",
       "verification": {
-        "method": "artifact_hub_control_panel_and_github_pages_metadata",
-        "result": "Artifact Hub repository was added under bbwdadfg with ID 5edaa3c0-5a5a-41d2-baca-f28413f65220; GitHub Pages serves artifacthub-repo.yml and index.yaml. Artifact Hub package API is still indexing.",
-        "checked_at": "2026-06-29T12:42:30Z"
+        "method": "artifact_hub_package_api_and_public_page",
+        "result": "Artifact Hub API returned package m3u8-player-site-kit version 0.1.0, repository verified_publisher=true, and links to the M3U8 Player site/tool pages.",
+        "checked_at": "2026-06-29T13:18:39Z"
       },
       "cleanup": [],
       "notes": [
         "Repository ID: 5edaa3c0-5a5a-41d2-baca-f28413f65220",
-        "Artifact Hub UI reported: Not processed yet, it will be processed automatically in about 22 minutes.",
-        "artifacthub-repo.yml pushed to master and gh-pages."
+        "artifacthub-repo.yml is served from GitHub Pages and ownership is verified."
       ]
     },
     {
@@ -825,16 +827,6 @@
     {
       "platform": "cocoapods",
       "reason": "Prepare Swift podspec and publish with existing CocoaPods token.",
-      "owner": "agent"
-    },
-    {
-      "platform": "chocolatey",
-      "reason": "Recheck moderation status until automated review completes.",
-      "owner": "agent"
-    },
-    {
-      "platform": "helm_artifact_hub",
-      "reason": "Recheck Artifact Hub package API/page after repository indexing completes.",
       "owner": "agent"
     },
     {

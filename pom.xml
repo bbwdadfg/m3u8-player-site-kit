@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>net.clojars.tianwei</groupId>
+  <groupId>io.github.bbwdadfg</groupId>
   <artifactId>m3u8-player-site-kit</artifactId>
   <version>0.1.0</version>
   <packaging>jar</packaging>
@@ -32,13 +32,15 @@
     <url>https://github.com/bbwdadfg/m3u8-player-site-kit</url>
     <connection>scm:git:https://github.com/bbwdadfg/m3u8-player-site-kit.git</connection>
     <developerConnection>scm:git:https://github.com/bbwdadfg/m3u8-player-site-kit.git</developerConnection>
-    <tag>v0.1.0</tag>
+    <tag>maven-v0.1.0</tag>
   </scm>
 
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.jupiter.version>5.11.4</junit.jupiter.version>
+    <central.autoPublish>false</central.autoPublish>
+    <central.skipPublishing>false</central.skipPublishing>
   </properties>
 
   <dependencies>
@@ -83,14 +85,38 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.2.7</version>
+        <configuration>
+          <keyname>AF10698CAC475560</keyname>
+          <gpgArguments>
+            <arg>--pinentry-mode</arg>
+            <arg>loopback</arg>
+          </gpgArguments>
+        </configuration>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.11.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>${central.autoPublish}</autoPublish>
+          <skipPublishing>${central.skipPublishing}</skipPublishing>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-
-  <distributionManagement>
-    <repository>
-      <id>clojars</id>
-      <name>Clojars</name>
-      <url>https://repo.clojars.org/</url>
-    </repository>
-  </distributionManagement>
 </project>
