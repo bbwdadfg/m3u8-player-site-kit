@@ -12,8 +12,8 @@
 | blocked_credentials | 3 |
 | blocked_oauth | 1 |
 | blocked_review | 3 |
-| published | 2 |
-| verified | 22 |
+| published | 1 |
+| verified | 23 |
 
 ## Published Links
 
@@ -36,7 +36,7 @@
 | cocoapods | `M3u8PlayerSiteKit` | `0.1.0` | <https://cocoapods.org/pods/M3u8PlayerSiteKit> | GitHub Actions run 28375419607 completed pod spec lint and pod trunk push; CocoaPods public page and metrics API returned 200 for M3u8PlayerSiteKit 0.1.0. |
 | luarocks | `m3u8-player-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/m3u8-player-site-kit> | LuaRocks page returned 200 and shows homepage https://m3u8-player.net plus version 0.1.0-1. |
 | chocolatey | `m3u8-player-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/m3u8-player-site-kit> | Chocolatey package page returned 200, shows public download counts, and exposes the 0.1.0 nupkg download URL. |
-| github_packages | `@bbwdadfg/m3u8-player-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit> | Package published to npm.pkg.github.com and authenticated metadata shows version 0.1.0 plus homepage/repository. |
+| github_packages | `@bbwdadfg/m3u8-player-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit> | Both GitHub package URLs returned HTTP 200 publicly after visibility was changed to public. |
 | gitlab_packages | `baiwei.chu/m3u8-player-site-kit:m3u8-player-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/m3u8-player-site-kit/-/packages> | GitLab project and packages page returned 200; unauthenticated package download SHA256 matched uploaded archive. |
 | terraform_registry | `bbwdadfg/m3u8-player-site-kit/null` | `0.1.0` | <https://registry.terraform.io/modules/bbwdadfg/m3u8-player-site-kit/null/latest> | Registry public page returned 200; API returned version 0.1.0, source repo, README links to M3U8 Player, HLS player, downloader, converter, and IPTV player. |
 | helm_artifact_hub | `m3u8-player-site-kit` | `0.1.0` | <https://artifacthub.io/packages/helm/m3u8-player-helm-charts/m3u8-player-site-kit> | Artifact Hub API returned package m3u8-player-site-kit version 0.1.0, repository verified_publisher=true, and links to the M3U8 Player site/tool pages. |
@@ -48,7 +48,6 @@
 
 | Platform | Status | Reason | Owner |
 | --- | --- | --- | --- |
-| github_packages | `published` | Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission. | user |
 | cpan_metacpan | `blocked_credentials` | Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload. | user |
 | hackage | `blocked_credentials` | Add a Hackage token to Keychain if Hackage is still desired. | user |
 | maven_central_javadoc | `published` | Recheck repo1.maven.org POM/JAR and javadoc.io after Central indexing; mark verified when artifacts return 200. | agent |
@@ -99,7 +98,6 @@
 
 ## Follow-Up Queue
 
-- github_packages: Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission. (user)
 - cpan_metacpan: Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload. (user)
 - hackage: Add a Hackage token to Keychain if Hackage is still desired. (user)
 - maven_central_javadoc: Recheck repo1.maven.org POM/JAR and javadoc.io after Central indexing; mark verified when artifacts return 200. (agent)

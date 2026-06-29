@@ -517,7 +517,7 @@
     },
     {
       "platform": "github_packages",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "github_package",
       "automation_level": "automated_with_token",
       "package": "@bbwdadfg/m3u8-player-site-kit",
@@ -525,21 +525,22 @@
       "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [
-        "package_metadata_auth_verified",
-        "repository"
+        "public_github_package_page",
+        "repository",
+        "package_metadata"
       ],
       "credential_status": "keychain_token_used",
-      "blocked_reason": "GitHub Packages defaulted to private; visibility API returned 404. Authenticated npm view verifies version, homepage, and repository.",
+      "blocked_reason": "",
       "verification": {
-        "method": "authenticated_npm_view",
-        "result": "Package published to npm.pkg.github.com and authenticated metadata shows version 0.1.0 plus homepage/repository.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "unauthenticated_public_package_pages",
+        "result": "Both GitHub package URLs returned HTTP 200 publicly after visibility was changed to public.",
+        "checked_at": "2026-06-29T13:33:18Z"
       },
       "cleanup": [
         "temporary npmrc deleted"
       ],
       "notes": [
-        "Public page returned 404 until package visibility is changed in GitHub UI or with a token that can update package visibility."
+        "Package is now public."
       ]
     },
     {
@@ -823,11 +824,6 @@
     }
   ],
   "follow_up": [
-    {
-      "platform": "github_packages",
-      "reason": "Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission.",
-      "owner": "user"
-    },
     {
       "platform": "cpan_metacpan",
       "reason": "Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload.",
