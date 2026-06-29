@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const links = require("../index");
+
+const payload = {
+  name: "M3U8 Player",
+  homepage: links.homeUrl(),
+  onlineM3u8Player: links.playerUrl(),
+  m3u8Downloader: links.downloaderUrl(),
+  m3u8ToMp4Converter: links.converterUrl(),
+  m3u8HlsPlayer: links.hlsPlayerUrl(),
+  iptvM3u8Player: "https://m3u8-player.net/iptv-player/"
+};
+
+console.log(JSON.stringify(payload, null, 2));

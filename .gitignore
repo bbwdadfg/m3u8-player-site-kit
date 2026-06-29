@@ -21,8 +21,8 @@
 *.rock
 __pycache__/
 *.egg-info/
-bin/
-obj/
+nuget/**/bin/
+nuget/**/obj/
 blib/
 MYMETA.*
 Makefile

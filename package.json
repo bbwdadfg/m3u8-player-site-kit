@@ -20,6 +20,9 @@
   "license": "MIT",
   "type": "commonjs",
   "main": "index.js",
+  "bin": {
+    "m3u8-player-site-kit": "bin/m3u8-player-site-kit"
+  },
   "scripts": {
     "test": "node test_node.js"
   },
