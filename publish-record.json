@@ -16,7 +16,7 @@
       "https://m3u8-player.net/iptv-player/"
     ],
     "run_started_at": "2026-06-29T08:20:00Z",
-    "run_finished_at": "2026-06-29T08:34:33Z"
+    "run_finished_at": "2026-06-29T09:10:00Z"
   },
   "platforms": [
     {
@@ -552,203 +552,236 @@
     },
     {
       "platform": "terraform_registry",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
-      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No natural public Terraform module for this online player helper in this pass.",
+      "status": "blocked_oauth",
+      "artifact_type": "terraform_module",
+      "automation_level": "semi_auto",
+      "package": "bbwdadfg/m3u8-player-site-kit/null",
+      "version": "0.1.0",
+      "public_url": "https://registry.terraform.io/modules/bbwdadfg/m3u8-player-site-kit/null/latest",
+      "repository_url": "https://github.com/bbwdadfg/terraform-null-m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "repository_homepage",
+        "terraform_validate"
+      ],
+      "credential_status": "hashicorp_token_present_but_registry_import_requires_ui",
+      "blocked_reason": "Terraform Registry public module publication requires web login, GitHub connection, and importing the public repository.",
       "verification": {
-        "method": "fit_check",
-        "result": "No natural public Terraform module for this online player helper in this pass.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "terraform_validate_and_github_repo",
+        "result": "Terraform fmt/init/validate passed; public GitHub repo and v0.1.0 tag exist.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "User must import repository bbwdadfg/terraform-null-m3u8-player-site-kit in Terraform Registry UI."
+      ]
     },
     {
       "platform": "helm_artifact_hub",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
-      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No Kubernetes/self-hosted deployable artifact prepared.",
+      "status": "published",
+      "artifact_type": "helm_chart",
+      "automation_level": "semi_auto",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://bbwdadfg.github.io/m3u8-player-helm-charts/index.yaml",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-helm-charts",
+      "link_surfaces_verified": [
+        "Chart.yaml_home",
+        "sources",
+        "README.md",
+        "helm_index"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "Artifact Hub listing requires user login to add/claim the Helm repository and provide repository ID for ownership metadata.",
       "verification": {
-        "method": "fit_check",
-        "result": "No Kubernetes/self-hosted deployable artifact prepared.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "helm_lint_template_and_public_index",
+        "result": "Helm lint/template passed; GitHub Pages index.yaml is public and includes homepage, sources, and long-tail M3U8 links.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Helm repo URL is ready for Artifact Hub: https://bbwdadfg.github.io/m3u8-player-helm-charts"
+      ]
     },
     {
       "platform": "ansible_galaxy",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "verified",
+      "artifact_type": "ansible_collection",
+      "automation_level": "automated_with_token",
+      "package": "bbwdadfg.m3u8_player_site_kit",
+      "version": "0.1.1",
+      "public_url": "https://galaxy.ansible.com/ui/repo/published/bbwdadfg/m3u8_player_site_kit/",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No owned Galaxy namespace or real config-management use case used in this pass.",
+      "link_surfaces_verified": [
+        "galaxy_yml_homepage",
+        "README.md",
+        "repository",
+        "galaxy_page"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "fit_check",
-        "result": "No owned Galaxy namespace or real config-management use case used in this pass.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "galaxy_import_api_and_public_page",
+        "result": "Ansible Galaxy import completed after adding runtime metadata and module docs; public Galaxy page returned 200.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
-      "cleanup": [],
-      "notes": []
+      "cleanup": [
+        "temporary token shell variable unset"
+      ],
+      "notes": [
+        "First 0.1.0 import failed due missing meta/runtime.yml and module documentation; fixed and published 0.1.1."
+      ]
     },
     {
       "platform": "open_vsx",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "blocked_credentials",
+      "artifact_type": "vscode_compatible_extension",
+      "automation_level": "semi_auto_review",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://open-vsx.org/extension/bbwdadfg/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "Editor extension would be thin for this task; not approved as an applicable conditional platform.",
+      "credential_status": "openvsx_token_missing",
+      "blocked_reason": "Open VSX token is missing and publishing requires Eclipse/Open VSX publisher agreement and namespace setup.",
       "verification": {
-        "method": "fit_check",
-        "result": "Editor extension would be thin for this task; not approved as an applicable conditional platform.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "credential_check",
+        "result": "Keychain service publish-package-backlinks/openvsx-token is missing.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
       "notes": []
     },
     {
       "platform": "wordpress_plugin_directory",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "blocked_oauth",
+      "artifact_type": "wordpress_plugin",
+      "automation_level": "manual_review",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://wordpress.org/plugins/m3u8-player-site-kit/",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No real WordPress shortcode/block plugin prepared.",
+      "credential_status": "wordpress_org_login_required",
+      "blocked_reason": "WordPress.org plugin submission requires browser login and manual plugin review; no WordPress.org session was available in this run.",
       "verification": {
-        "method": "fit_check",
-        "result": "No real WordPress shortcode/block plugin prepared.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "manual_platform_requirement",
+        "result": "Publishing cannot be completed without WordPress.org login/review flow.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "A real shortcode/block plugin should be prepared before submission."
+      ]
     },
     {
       "platform": "aur",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "blocked_credentials",
+      "artifact_type": "arch_package",
+      "automation_level": "manual_git_ssh",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://aur.archlinux.org/packages/m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No real Arch CLI or desktop package prepared.",
+      "credential_status": "aur_ssh_not_verified_makepkg_missing",
+      "blocked_reason": "AUR publication requires AUR account SSH access; local macOS also lacks makepkg for full validation.",
       "verification": {
-        "method": "fit_check",
-        "result": "No real Arch CLI or desktop package prepared.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "tool_and_account_check",
+        "result": "makepkg is missing; AUR SSH/account setup not verified.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Can package the Node CLI once AUR SSH access is configured."
+      ]
     },
     {
       "platform": "conda_forge",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "blocked_review",
+      "artifact_type": "conda_recipe",
+      "automation_level": "pr_review",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/conda-forge/staged-recipes/pulls?q=m3u8-player-site-kit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "Generic site helper has no real conda-forge value.",
+      "credential_status": "github_pr_review_required",
+      "blocked_reason": "Conda-forge requires staged-recipes PR review and package maintainership; no PR was opened in this pass.",
       "verification": {
-        "method": "fit_check",
-        "result": "Generic site helper has no real conda-forge value.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "platform_review_requirement",
+        "result": "PyPI package exists, so a recipe can be prepared, but conda-forge publication depends on PR review.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
       "notes": []
     },
     {
       "platform": "cran",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "blocked_review",
+      "artifact_type": "r_package",
+      "automation_level": "manual_review",
+      "package": "m3u8PlayerSiteKit",
+      "version": "0.1.0",
+      "public_url": "https://cran.r-project.org/package=m3u8PlayerSiteKit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No real R utility prepared.",
+      "credential_status": "manual_cran_review_required",
+      "blocked_reason": "CRAN submission requires maintainer email confirmation and manual review; no R package was submitted in this pass.",
       "verification": {
-        "method": "fit_check",
-        "result": "No real R utility prepared.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "platform_review_requirement",
+        "result": "CRAN cannot be completed without maintainer email confirmation and review.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
       "notes": []
     },
     {
       "platform": "flathub",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
+      "status": "skipped_policy",
+      "artifact_type": "desktop_app",
+      "automation_level": "pr_review",
+      "package": "net.m3u8_player.SiteKit",
+      "version": "0.1.0",
+      "public_url": "https://flathub.org/apps/net.m3u8_player.SiteKit",
       "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No desktop app exists.",
+      "credential_status": "not_applicable",
+      "blocked_reason": "Flathub requires a real desktop app with AppStream metadata; backlink-only wrapper would be misleading and likely rejected.",
       "verification": {
-        "method": "fit_check",
-        "result": "No desktop app exists.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "policy_fit_check",
+        "result": "No real desktop app exists for this site-kit helper.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
       "notes": []
     },
     {
       "platform": "homebrew",
-      "status": "skipped_not_applicable",
-      "artifact_type": "conditional_platform",
-      "automation_level": "conditional",
-      "package": "",
-      "version": "",
-      "public_url": "",
-      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none_required",
-      "blocked_reason": "No real CLI/app formula prepared for this pass.",
+      "status": "verified",
+      "artifact_type": "formula_tap",
+      "automation_level": "automated",
+      "package": "bbwdadfg/m3u8-player/m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/bbwdadfg/homebrew-m3u8-player",
+      "repository_url": "https://github.com/bbwdadfg/homebrew-m3u8-player",
+      "link_surfaces_verified": [
+        "homepage",
+        "formula_repo",
+        "tap_readme",
+        "local_install_test"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "fit_check",
-        "result": "No real CLI/app formula prepared for this pass.",
-        "checked_at": "2026-06-29T08:34:33Z"
+        "method": "brew_tap_install_test",
+        "result": "Homebrew tap repository is public; brew tap/install/test succeeded and CLI printed M3U8 Player links.",
+        "checked_at": "2026-06-29T09:10:00Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Formula audit warnings were fixed in remote tap after initial install test; local tap cache still needed refresh."
+      ]
     }
   ],
   "follow_up": [
@@ -786,6 +819,41 @@
       "platform": "chocolatey",
       "reason": "Recheck moderation status until automated review completes.",
       "owner": "agent"
+    },
+    {
+      "platform": "terraform_registry",
+      "reason": "Sign in to Terraform Registry, connect GitHub, and import bbwdadfg/terraform-null-m3u8-player-site-kit using tag v0.1.0.",
+      "owner": "user"
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "reason": "Add Helm repo https://bbwdadfg.github.io/m3u8-player-helm-charts in Artifact Hub and provide the repository ID for artifacthub-repo.yml ownership metadata.",
+      "owner": "user"
+    },
+    {
+      "platform": "open_vsx",
+      "reason": "Create/confirm Open VSX publisher namespace and store openvsx-token in Keychain.",
+      "owner": "user"
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "reason": "Sign in to WordPress.org and complete plugin submission/review flow after a real plugin zip is prepared.",
+      "owner": "user"
+    },
+    {
+      "platform": "aur",
+      "reason": "Add local SSH public key to an AUR account and provide/confirm package ownership.",
+      "owner": "user"
+    },
+    {
+      "platform": "cran",
+      "reason": "Confirm maintainer email if a CRAN submission is made.",
+      "owner": "user"
+    },
+    {
+      "platform": "flathub",
+      "reason": "Only proceed if you want a real desktop app, not a backlink-only wrapper.",
+      "owner": "user"
     }
   ]
 }

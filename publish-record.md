@@ -3,19 +3,21 @@
 - Site: <https://m3u8-player.net>
 - Source repo: <https://github.com/bbwdadfg/m3u8-player-site-kit>
 - Started: 2026-06-29T08:20:00Z
-- Finished: 2026-06-29T08:34:33Z
+- Finished: 2026-06-29T09:10:00Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 2 |
+| blocked_credentials | 4 |
 | blocked_namespace | 1 |
+| blocked_oauth | 2 |
+| blocked_review | 2 |
 | planned | 2 |
-| published | 1 |
-| skipped_not_applicable | 10 |
+| published | 2 |
+| skipped_policy | 1 |
 | submitted | 1 |
-| verified | 14 |
+| verified | 16 |
 
 ## Published Links
 
@@ -37,6 +39,9 @@
 | chocolatey | `m3u8-player-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/m3u8-player-site-kit> | Chocolatey page returned 200 with project URL https://m3u8-player.net and status Pending automated review. |
 | github_packages | `@bbwdadfg/m3u8-player-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit> | Package published to npm.pkg.github.com and authenticated metadata shows version 0.1.0 plus homepage/repository. |
 | gitlab_packages | `baiwei.chu/m3u8-player-site-kit:m3u8-player-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/m3u8-player-site-kit/-/packages> | GitLab project and packages page returned 200; unauthenticated package download SHA256 matched uploaded archive. |
+| helm_artifact_hub | `m3u8-player-site-kit` | `0.1.0` | <https://bbwdadfg.github.io/m3u8-player-helm-charts/index.yaml> | Helm lint/template passed; GitHub Pages index.yaml is public and includes homepage, sources, and long-tail M3U8 links. |
+| ansible_galaxy | `bbwdadfg.m3u8_player_site_kit` | `0.1.1` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/m3u8_player_site_kit/> | Ansible Galaxy import completed after adding runtime metadata and module docs; public Galaxy page returned 200. |
+| homebrew | `bbwdadfg/m3u8-player/m3u8-player-site-kit` | `0.1.0` | <https://github.com/bbwdadfg/homebrew-m3u8-player> | Homebrew tap repository is public; brew tap/install/test succeeded and CLI printed M3U8 Player links. |
 
 ## Blocked Or Manual Steps
 
@@ -49,10 +54,17 @@
 | maven_central_javadoc | `planned` | Prepare Central-ready signed Maven artifact under io.github.bbwdadfg. | agent |
 | cocoapods | `planned` | Prepare Swift podspec and publish with existing CocoaPods token. | agent |
 | chocolatey | `submitted` | Recheck moderation status until automated review completes. | agent |
+| terraform_registry | `blocked_oauth` | Sign in to Terraform Registry, connect GitHub, and import bbwdadfg/terraform-null-m3u8-player-site-kit using tag v0.1.0. | user |
+| helm_artifact_hub | `published` | Add Helm repo https://bbwdadfg.github.io/m3u8-player-helm-charts in Artifact Hub and provide the repository ID for artifacthub-repo.yml ownership metadata. | user |
+| open_vsx | `blocked_credentials` | Create/confirm Open VSX publisher namespace and store openvsx-token in Keychain. | user |
+| wordpress_plugin_directory | `blocked_oauth` | Sign in to WordPress.org and complete plugin submission/review flow after a real plugin zip is prepared. | user |
+| aur | `blocked_credentials` | Add local SSH public key to an AUR account and provide/confirm package ownership. | user |
+| cran | `blocked_review` | Confirm maintainer email if a CRAN submission is made. | user |
+| flathub | `skipped_policy` | Only proceed if you want a real desktop app, not a backlink-only wrapper. | user |
 
 ## Failed Platforms
 
-None. Blocked platforms are credentials, namespace, visibility, or review issues, not package rejection.
+None. Blocked platforms are credentials, namespace, visibility, OAuth, policy, or review issues unless otherwise noted.
 
 ## Credential Cleanup
 
@@ -64,7 +76,7 @@ None. Blocked platforms are credentials, namespace, visibility, or review issues
 - chocolatey: NUGET_API_KEY environment cleared after command.
 - github_packages: temporary npmrc deleted.
 - gitlab_packages: temporary curl config removed.
-- JSR: token value was not stored in records, but the CLI echoed it in failed command output. Rotate the JSR token before retrying.
+- ansible_galaxy: temporary token shell variable unset.
 
 ## Follow-Up Queue
 
@@ -75,3 +87,10 @@ None. Blocked platforms are credentials, namespace, visibility, or review issues
 - maven_central_javadoc: Prepare Central-ready signed Maven artifact under io.github.bbwdadfg. (agent)
 - cocoapods: Prepare Swift podspec and publish with existing CocoaPods token. (agent)
 - chocolatey: Recheck moderation status until automated review completes. (agent)
+- terraform_registry: Sign in to Terraform Registry, connect GitHub, and import bbwdadfg/terraform-null-m3u8-player-site-kit using tag v0.1.0. (user)
+- helm_artifact_hub: Add Helm repo https://bbwdadfg.github.io/m3u8-player-helm-charts in Artifact Hub and provide the repository ID for artifacthub-repo.yml ownership metadata. (user)
+- open_vsx: Create/confirm Open VSX publisher namespace and store openvsx-token in Keychain. (user)
+- wordpress_plugin_directory: Sign in to WordPress.org and complete plugin submission/review flow after a real plugin zip is prepared. (user)
+- aur: Add local SSH public key to an AUR account and provide/confirm package ownership. (user)
+- cran: Confirm maintainer email if a CRAN submission is made. (user)
+- flathub: Only proceed if you want a real desktop app, not a backlink-only wrapper. (user)
