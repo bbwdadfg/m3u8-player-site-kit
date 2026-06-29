@@ -1,0 +1,4 @@
+Makefile.PL
+MANIFEST
+lib/M3U8/Player/SiteKit.pm
+t/sitekit.t

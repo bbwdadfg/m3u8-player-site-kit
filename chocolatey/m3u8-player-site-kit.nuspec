@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>m3u8-player-site-kit</id>
+    <version>0.1.0</version>
+    <title>M3U8 Player Site Kit</title>
+    <authors>M3U8 Player</authors>
+    <projectUrl>https://m3u8-player.net</projectUrl>
+    <licenseUrl>https://opensource.org/license/mit/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Small PowerShell metadata helpers for M3U8 Player, an online M3U8, HLS, and IPTV stream player.</description>
+    <summary>URL helpers for M3U8 Player.</summary>
+    <tags>m3u8player m3u8 hls iptv streaming</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="README.md" target="README.md" />
+    <file src="LICENSE.txt" target="LICENSE.txt" />
+  </files>
+</package>

@@ -1,0 +1,14 @@
+{
+  "name": "@bbwdadfg/m3u8-player-site-kit",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "publish": {
+    "include": [
+      "mod.ts",
+      "mod_test.ts",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}

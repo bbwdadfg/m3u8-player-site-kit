@@ -17,5 +17,14 @@
 *.tar
 *.jar
 *.war
+*.nupkg
+*.rock
 __pycache__/
 *.egg-info/
+bin/
+obj/
+blib/
+MYMETA.*
+Makefile
+pm_to_blib
+M3U8-Player-SiteKit-*/
