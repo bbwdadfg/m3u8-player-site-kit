@@ -1,0 +1,791 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "site": "https://m3u8-player.net",
+    "brand": "M3U8 Player",
+    "site_type": "online_video_tool",
+    "slug_hyphen": "m3u8-player-site-kit",
+    "slug_underscore": "m3u8_player_site_kit",
+    "source_repo": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+    "useful_urls": [
+      "https://m3u8-player.net",
+      "https://m3u8-player.net/#player",
+      "https://m3u8-player.net/m3u8downloader/",
+      "https://m3u8-player.net/m3u8tomp4/",
+      "https://m3u8-player.net/hls-player/",
+      "https://m3u8-player.net/iptv-player/"
+    ],
+    "run_started_at": "2026-06-29T08:20:00Z",
+    "run_finished_at": "2026-06-29T08:34:33Z"
+  },
+  "platforms": [
+    {
+      "platform": "github",
+      "status": "verified",
+      "artifact_type": "source_repository",
+      "automation_level": "automated",
+      "package": "bbwdadfg/m3u8-player-site-kit",
+      "version": "v0.1.0 + platform tags",
+      "public_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "repository_homepage",
+        "tags"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "github_api_and_public_repo",
+        "result": "Repository is public and homepage is https://m3u8-player.net.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Added long-tail anchors for online M3U8 player, M3U8 HLS player, IPTV M3U8 player, downloader, and converter."
+      ]
+    },
+    {
+      "platform": "pkg_go_dev",
+      "status": "verified",
+      "artifact_type": "go_module",
+      "automation_level": "automated_after_git_tag",
+      "package": "github.com/bbwdadfg/m3u8-player-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://pkg.go.dev/github.com/bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "go_doc",
+        "source_link"
+      ],
+      "credential_status": "none_required",
+      "blocked_reason": "",
+      "verification": {
+        "method": "go_proxy_and_public_page",
+        "result": "Go proxy returned v0.1.0 and pkg.go.dev page was previously published.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "packagist",
+      "status": "verified",
+      "artifact_type": "composer_package",
+      "automation_level": "semi_auto",
+      "package": "bbwdadfg/m3u8-player-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://packagist.org/packages/bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "composer_homepage",
+        "support_source",
+        "README.md"
+      ],
+      "credential_status": "packagist_token_or_browser_session_used_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "packagist_provider_api",
+        "result": "Existing package is published with homepage and source metadata.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "crates_io_docs_rs",
+      "status": "verified",
+      "artifact_type": "rust_crate",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://crates.io/crates/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "Cargo.toml_homepage",
+        "repository",
+        "README.md",
+        "docs_rs"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "crates_api_with_user_agent",
+        "result": "crates.io API returned 0.1.0 and homepage https://m3u8-player.net.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "docs.rs page: https://docs.rs/m3u8-player-site-kit/latest/m3u8_player_site_kit/"
+      ]
+    },
+    {
+      "platform": "rubygems",
+      "status": "verified",
+      "artifact_type": "ruby_gem",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://rubygems.org/gems/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "homepage_uri",
+        "source_code_uri",
+        "gem_page"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "rubygems_api",
+        "result": "RubyGems API returned package metadata.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "npm",
+      "status": "verified",
+      "artifact_type": "javascript_package",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://www.npmjs.com/package/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "keychain_token_used_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "npm_registry_json",
+        "result": "npm registry returned version 0.1.0, homepage, and repository.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary npmrc deleted in previous run"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pypi",
+      "status": "verified",
+      "artifact_type": "python_package",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://pypi.org/project/m3u8-player-site-kit/",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "project_urls",
+        "README.md",
+        "pypi_page"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "pypi_json_api",
+        "result": "PyPI JSON API returned package metadata.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "pub_dev",
+      "status": "verified",
+      "artifact_type": "dart_package",
+      "automation_level": "semi_auto_oauth",
+      "package": "m3u8_player_site_kit",
+      "version": "0.1.0",
+      "public_url": "https://pub.dev/packages/m3u8_player_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "pubspec_homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "pub_dev_api",
+        "result": "pub.dev API returned package metadata.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "hex_hexdocs",
+      "status": "verified",
+      "artifact_type": "elixir_package",
+      "automation_level": "automated_with_token",
+      "package": "m3u8_player_site_kit",
+      "version": "0.1.0",
+      "public_url": "https://hex.pm/packages/m3u8_player_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "package_links",
+        "README.md",
+        "hexdocs"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "hex_api_and_hexdocs",
+        "result": "Hex API returned package metadata; HexDocs page exists.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "HexDocs: https://hexdocs.pm/m3u8_player_site_kit/0.1.0/M3u8PlayerSiteKit.html"
+      ]
+    },
+    {
+      "platform": "clojars",
+      "status": "verified",
+      "artifact_type": "maven_artifact",
+      "automation_level": "automated_with_token",
+      "package": "net.clojars.tianwei/m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://clojars.org/net.clojars.tianwei/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "pom_url",
+        "scm_url",
+        "license",
+        "repo_pom"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "clojars_repo_metadata",
+        "result": "Clojars Maven metadata returned release 0.1.0.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "docker_hub",
+      "status": "verified",
+      "artifact_type": "oci_image",
+      "automation_level": "automated_with_token_or_api",
+      "package": "baiwei111/m3u8-player-site-kit",
+      "version": "0.1.0/latest",
+      "public_url": "https://hub.docker.com/r/baiwei111/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "Dockerfile_labels",
+        "repository_overview",
+        "tag_page"
+      ],
+      "credential_status": "published_previous_run",
+      "blocked_reason": "",
+      "verification": {
+        "method": "docker_registry_manifest",
+        "result": "Previous run verified Docker manifest digest and Docker Hub overview.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Digest from previous record: sha256:6cb0c0a564c2f84d8b11aefecd97d0b2d3719183e86c8f63a55422821b5dcd3f"
+      ]
+    },
+    {
+      "platform": "jsr",
+      "status": "blocked_namespace",
+      "artifact_type": "typescript_package",
+      "automation_level": "semi_auto",
+      "package": "@bbwdadfg/m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://jsr.io/@bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_docs"
+      ],
+      "credential_status": "keychain_token_present_but_should_rotate",
+      "blocked_reason": "JSR requires package creation/approval at https://jsr.io/new?scope=bbwdadfg&package=m3u8-player-site-kit&from=cli before CLI publish.",
+      "verification": {
+        "method": "dry_run_and_live_publish_attempt",
+        "result": "Dry-run passed; live publish blocked because the scoped package does not exist yet.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary token shell variable unset"
+      ],
+      "notes": [
+        "JSR CLI echoed the token in failed command output; rotate the JSR token before rerunning."
+      ]
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "status": "planned",
+      "artifact_type": "java_library",
+      "automation_level": "semi_auto_signed",
+      "package": "io.github.bbwdadfg:m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_present_gpg_passphrase_present",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_attempted_this_pass",
+        "result": "Maven Central credentials exist, but this pass prioritized already prepared lower-risk packages. Needs Central-ready pom and signed deployment.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Use groupId io.github.bbwdadfg and primary GPG key AF10698CAC475560 in a follow-up."
+      ]
+    },
+    {
+      "platform": "nuget",
+      "status": "verified",
+      "artifact_type": "dotnet_package",
+      "automation_level": "automated_with_token",
+      "package": "M3u8PlayerSiteKit",
+      "version": "0.1.0",
+      "public_url": "https://www.nuget.org/packages/M3u8PlayerSiteKit/0.1.0",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "projectUrl",
+        "repository",
+        "README.md",
+        "package_page",
+        "license"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "nuget_package_page",
+        "result": "NuGet package page returned 200 and README links include M3U8 Player, online M3U8 player, M3U8 downloader, M3U8 to MP4 converter, M3U8 HLS player, and IPTV M3U8 player.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "NUGET_API_KEY environment cleared after command"
+      ],
+      "notes": [
+        "NuGet flat-container and registration APIs were still returning 404 shortly after publish; browser package page is public."
+      ]
+    },
+    {
+      "platform": "cocoapods",
+      "status": "planned",
+      "artifact_type": "ios_macos_pod",
+      "automation_level": "semi_auto_with_trunk_auth",
+      "package": "M3u8PlayerSiteKit",
+      "version": "0.1.0",
+      "public_url": "https://cocoapods.org/pods/M3u8PlayerSiteKit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_present",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_attempted_this_pass",
+        "result": "No podspec was prepared in this pass.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Can be done with a small Swift typed metadata helper and CocoaPods source tag."
+      ]
+    },
+    {
+      "platform": "luarocks",
+      "status": "verified",
+      "artifact_type": "lua_module",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0-1",
+      "public_url": "https://luarocks.org/modules/bbwdadfg/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "rockspec_homepage",
+        "source_url",
+        "module_page",
+        "README.md"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "luarocks_public_page",
+        "result": "LuaRocks page returned 200 and shows homepage https://m3u8-player.net plus version 0.1.0-1.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary API key shell variable unset"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "cpan_metacpan",
+      "status": "blocked_credentials",
+      "artifact_type": "perl_distribution",
+      "automation_level": "automated_with_pause_account",
+      "package": "M3U8-Player-SiteKit",
+      "version": "0.001",
+      "public_url": "https://metacpan.org/release/M3U8-Player-SiteKit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_credentials_rejected",
+      "blocked_reason": "cpan-upload returned 401 Unauthorized with the stored PAUSE/CPAN credentials.",
+      "verification": {
+        "method": "local_test_and_dist_then_upload_attempt",
+        "result": "Perl tests and make dist passed; upload failed with 401.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary PAUSE config removed"
+      ],
+      "notes": [
+        "Distribution tarball can be regenerated from perl/ when valid credentials are available."
+      ]
+    },
+    {
+      "platform": "hackage",
+      "status": "blocked_credentials",
+      "artifact_type": "haskell_package",
+      "automation_level": "automated_with_token",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://hackage.haskell.org/package/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_missing",
+      "blocked_reason": "Keychain service publish-package-backlinks/hackage-token is missing.",
+      "verification": {
+        "method": "credential_check",
+        "result": "No Hackage token found.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "chocolatey",
+      "status": "submitted",
+      "artifact_type": "windows_package",
+      "automation_level": "semi_auto_review",
+      "package": "m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://community.chocolatey.org/packages/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "projectUrl",
+        "package_page"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "chocolatey_public_page",
+        "result": "Chocolatey page returned 200 with project URL https://m3u8-player.net and status Pending automated review.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "NUGET_API_KEY environment cleared after command"
+      ],
+      "notes": [
+        "Submitted to Chocolatey moderation/review queue."
+      ]
+    },
+    {
+      "platform": "github_packages",
+      "status": "published",
+      "artifact_type": "github_package",
+      "automation_level": "automated_with_token",
+      "package": "@bbwdadfg/m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/m3u8-player-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "package_metadata_auth_verified",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "GitHub Packages defaulted to private; visibility API returned 404. Authenticated npm view verifies version, homepage, and repository.",
+      "verification": {
+        "method": "authenticated_npm_view",
+        "result": "Package published to npm.pkg.github.com and authenticated metadata shows version 0.1.0 plus homepage/repository.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary npmrc deleted"
+      ],
+      "notes": [
+        "Public page returned 404 until package visibility is changed in GitHub UI or with a token that can update package visibility."
+      ]
+    },
+    {
+      "platform": "gitlab_packages",
+      "status": "verified",
+      "artifact_type": "gitlab_package",
+      "automation_level": "automated_with_token_or_ci",
+      "package": "baiwei.chu/m3u8-player-site-kit:m3u8-player-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://gitlab.com/baiwei.chu/m3u8-player-site-kit/-/packages",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [
+        "public_project",
+        "package_page",
+        "README.md",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_project_page_and_unauthenticated_download",
+        "result": "GitLab project and packages page returned 200; unauthenticated package download SHA256 matched uploaded archive.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [
+        "temporary curl config removed"
+      ],
+      "notes": [
+        "Archive SHA256: 56eb18c47cec81753c25862eba1cc94cb9c48495de0bf4d1721308db2177a5a9"
+      ]
+    },
+    {
+      "platform": "terraform_registry",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No natural public Terraform module for this online player helper in this pass.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No natural public Terraform module for this online player helper in this pass.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No Kubernetes/self-hosted deployable artifact prepared.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No Kubernetes/self-hosted deployable artifact prepared.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "ansible_galaxy",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No owned Galaxy namespace or real config-management use case used in this pass.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No owned Galaxy namespace or real config-management use case used in this pass.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "open_vsx",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "Editor extension would be thin for this task; not approved as an applicable conditional platform.",
+      "verification": {
+        "method": "fit_check",
+        "result": "Editor extension would be thin for this task; not approved as an applicable conditional platform.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No real WordPress shortcode/block plugin prepared.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No real WordPress shortcode/block plugin prepared.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "aur",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No real Arch CLI or desktop package prepared.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No real Arch CLI or desktop package prepared.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "conda_forge",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "Generic site helper has no real conda-forge value.",
+      "verification": {
+        "method": "fit_check",
+        "result": "Generic site helper has no real conda-forge value.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "cran",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No real R utility prepared.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No real R utility prepared.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "flathub",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No desktop app exists.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No desktop app exists.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "homebrew",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conditional_platform",
+      "automation_level": "conditional",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/m3u8-player-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none_required",
+      "blocked_reason": "No real CLI/app formula prepared for this pass.",
+      "verification": {
+        "method": "fit_check",
+        "result": "No real CLI/app formula prepared for this pass.",
+        "checked_at": "2026-06-29T08:34:33Z"
+      },
+      "cleanup": [],
+      "notes": []
+    }
+  ],
+  "follow_up": [
+    {
+      "platform": "jsr",
+      "reason": "Create/approve @bbwdadfg/m3u8-player-site-kit on JSR and rotate the exposed JSR token before rerun.",
+      "owner": "user"
+    },
+    {
+      "platform": "github_packages",
+      "reason": "Make the GitHub Packages npm package public through the GitHub UI or a token with package visibility permission.",
+      "owner": "user"
+    },
+    {
+      "platform": "cpan_metacpan",
+      "reason": "Replace or refresh PAUSE/CPAN credentials in Keychain, then rerun cpan-upload.",
+      "owner": "user"
+    },
+    {
+      "platform": "hackage",
+      "reason": "Add a Hackage token to Keychain if Hackage is still desired.",
+      "owner": "user"
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "reason": "Prepare Central-ready signed Maven artifact under io.github.bbwdadfg.",
+      "owner": "agent"
+    },
+    {
+      "platform": "cocoapods",
+      "reason": "Prepare Swift podspec and publish with existing CocoaPods token.",
+      "owner": "agent"
+    },
+    {
+      "platform": "chocolatey",
+      "reason": "Recheck moderation status until automated review completes.",
+      "owner": "agent"
+    }
+  ]
+}
